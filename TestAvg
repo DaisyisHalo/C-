@@ -1,0 +1,22 @@
+using System;
+using static System.Console;
+
+class MainClass {
+  public static void Main (string[] args) {
+    //prompting the user for the scores to divide
+    
+    WriteLine("Enter 3 test scores to get an average");
+    //declairing all the variables decimals to get the exact number 
+    decimal numOne = int.Parse(ReadLine());
+    decimal numTwo = int.Parse(ReadLine());
+    decimal numThree = int.Parse(ReadLine());
+    decimal avgTest;
+    decimal avg;
+    
+    //the math used to get the average of the tests
+    avgTest = numOne + numTwo + numThree;
+    avg = avgTest/3;
+    WriteLine("The average for the tests is: {0} ",avg);
+
+  }
+}
