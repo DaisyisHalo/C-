@@ -1,0 +1,50 @@
+using System;
+
+class MainClass {
+
+ 
+
+
+  public static void Main (string[] args) {
+     Base (1,2,3);
+    Console.Read();
+  }
+     
+     
+  public static void Base(int len, int wid,int het)
+  {
+    len = 1;
+     Console.WriteLine("Enter length");
+    int a = Int32.Parse(Console.ReadLine());
+    if (a <= 0)
+    {
+      Console.WriteLine("{0}",(len));
+    }
+    else
+    {
+      Console.WriteLine("",a);
+    }
+     wid = 2;
+     Console.WriteLine("Enter width");
+    int b = Int32.Parse(Console.ReadLine());
+    if (b <= 0)
+    {
+      Console.WriteLine("{0}",(wid));
+    }
+    else
+    {
+      Console.WriteLine("",b);
+    }
+     len = 3;
+     Console.WriteLine("Enter height");
+    int c = Int32.Parse(Console.ReadLine());
+    if (c <= 0)
+    {
+      Console.WriteLine("{0}",(het));
+    }
+    else
+    {
+      Console.WriteLine("",c);
+    }
+  }
+}
