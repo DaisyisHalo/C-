@@ -1,0 +1,22 @@
+using System;
+
+class Contractor {
+  private string name;
+  private string phone;
+  private int startDate;
+
+
+  public Contractor(string name, string phone, int startDate)
+  {
+    this.name = name;
+    this.phone = phone;
+    this.startDate = startDate;
+  }
+}
+
+
+class MainClass {
+  public static void Main (string[] args) {
+    
+  }
+}
