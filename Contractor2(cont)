@@ -1,0 +1,82 @@
+using System;
+
+
+
+//Create the class and initialize the variables
+class Contractor 
+{
+  private string name;
+  private string phone;
+  private string startDate;
+  public string Name /// method with get set for each 
+  {
+    get
+    {
+      return name;
+    }
+    set
+    {
+      
+      name = value;
+      
+    }
+
+
+  }
+    public string Phone 
+  {
+    get
+    {
+      return phone;
+    }
+    set
+    {
+      
+      phone = value;
+      
+    }
+
+
+  }
+    public string StartDate 
+  {
+    get
+    {
+      return startDate;
+    }
+    set
+    {
+      
+      startDate = value;
+      
+    }
+
+
+  }
+
+    
+}
+
+
+
+
+
+class MainClass {
+  public static void Main () { 
+    Contractor conT = new Contractor(); //referencing the Contractor class with each piece of info
+   
+    
+    Console.Write("Enter a name\n ");
+	  conT.Name = Console.ReadLine();
+    Console.Write("Enter a phone number\n ");
+	  conT.Phone = Console.ReadLine();
+    Console.Write("Enter a date\n ");
+	  conT.StartDate = Console.ReadLine();
+   
+    
+    
+
+   
+  }
+
+}
