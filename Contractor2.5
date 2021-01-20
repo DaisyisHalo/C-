@@ -1,0 +1,84 @@
+using System;
+using System.Globalization;
+///Daisy Narvaez P10
+class Contractor
+{
+  public string name;
+  public string phone;
+  public string startDate;
+// a base so I can print it out with the subcontractor information 
+  public void PrintBase ()
+  {
+    Console.Write("\nName: " + name);
+    Console.Write("\nPhone: " + phone);
+    Console.Write("\nStart Date: " +startDate);
+
+  }
+//deriving the contractor class to the subcontractor class
+}
+class Subcontractor : Contractor
+{
+  public int shift;
+  public double hourlyRate;
+  public double payDiff;
+  public int hours;
+  public double pay;
+  
+
+
+  
+  
+  
+  
+}
+
+class MainClass {
+  public static void Main (string[] args) {
+
+    Contractor conT = new Contractor(); //referencing the Contractor class with each piece of info
+   
+    Console.Write("Enter a name\n ");
+	  conT.name = Console.ReadLine();
+    Console.Write("Enter a phone number\n ");
+	  conT.phone = Console.ReadLine();
+    Console.Write("Enter a date\n ");
+	  conT.startDate = Console.ReadLine();
+    
+
+
+    Subcontractor suB = new Subcontractor ();
+    //declaring the values
+    suB.payDiff = .03f;
+    suB.hourlyRate = 8;
+    
+  
+    
+    Console.Write("For day shift press 1 & for night shift press 2 \n");
+    suB.shift = Convert.ToInt32(Console.ReadLine());
+    Console.Write("How many hours did you work?\n");
+    suB.hours = Convert.ToInt32(Console.ReadLine());
+    conT.PrintBase();
+      if (suB.shift ==2)
+    {
+      suB.pay = (suB.hourlyRate * suB.hours) + (suB.hourlyRate * suB.hours)*suB.payDiff;
+      Console.Write("\nYour total hourly pay is:  ");
+      Console.WriteLine(suB.pay.ToString("C2", CultureInfo.CurrentCulture));
+    }
+    else
+    {
+      suB.pay =  suB.hourlyRate * suB.hours;
+      Console.Write("\nYour total hourly pay is:  ");
+      Console.WriteLine(suB.pay.ToString("C2", CultureInfo.CurrentCulture));
+    }
+    
+   
+
+
+     
+   
+
+  
+  }
+  
+  
+}
